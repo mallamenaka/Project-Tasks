@@ -1,0 +1,223 @@
+Basic Level
+1. What command is used to get the IP addresses of all interfaces
+on a server?
+The command to access Ip address is ipconfig on windows command prompt and ifconfig on mac.
+2. What is the purpose of "mv" command?
+mv stands for move. mv is used to move one or more files or directories from one place to another in file system like UNIX. It has two distinct functions:
+(i) It renames a file or folder.
+(ii) It moves group of files to different directory.
+3. Which command is used to create a new empty file?
+touch <filename>
+For example: touch menaka.txt
+4. Which command is used to display the contents of a directory?
+ls -a
+5. Which command is used to display all the file names along with
+their types of the current directory?
+ls -l
+6. Which command is used to clear the terminal?
+reset
+7. What are daemons?
+A daemon is a type of program on Unix-like operating systems that runs unobtrusively in the background, rather than under the direct control of a user, waiting to be activated by the occurrence of a specific event or condition.
+8. Which command is used to move to the parent directory?
+cd..
+9. What does echo command do?
+echo command in Linux is used to display line of text/string that are passed as an argument.
+10.How to display content of a file?
+Cat
+For example: cat menaka.txt
+
+11. How to identify which shell you are using?
+echo "$SHELL"
+12. How do you check if a service is running?
+service service-name status
+13.What is the command to run a program with elevated permissions?
+Sudo
+14.Which command is used to display the path of the current working directory?
+pwd
+15. How to delete a directory forcefully?
+rm -rf dirName
+16.Which command is used to switch from superuser to normal user?
+su username
+17.How to switch to superuser (root) with elevated permissions?
+sudo -i 
+sudo -s
+18.How to determine the type of a file?
+file <filename>
+
+INTERMEDIATE LEVEL
+1. What are the different modes when using VI editor?
+Two modes of operation in vi are entry mode and command mode. 
+2. Which command is used to create multiple directories simultaneously?
+The mkdir command in UNIX allows users to create directories or folders as they are referred to in some operating systems. The mkdir command can create multiple directories at once and also set permissions when creating the directory.
+3. What is LILO?
+LILO stands for Linux Loader that is used to load Linux into memory.
+
+4. How cd ~, cd / and cd - are different from each other?
+cd ~ Brings you to your home directory.
+cd / Takes you to the entire system’s root directory.
+cd - Brings you to the previous directory of the current directory.
+
+5. What is a grep command?
+Grep is a command-line tool that allows you to find a string in a file or stream. It can be used with a regular expression to be more flexible at finding strings.
+
+6. If we are in the directory X and we are running rmdir being in that directory X. Will this command successfully remove the directory or not?
+It will remove the directory, but we should use rmdir -r to remove the errors.
+
+7. What are the contents of /usr/local?
+/usr usually contains by far the largest share of data on a system. Hence, this is one of the most important directories in the system as it contains all the user binaries, their documentation, libraries, header files, etc.... X and its supporting libraries can be found here. 
+
+8. Which command is used to display the current username?
+The w command provides us with the username which is what we wanted, and a bonus set of data for that user.
+
+9. What command is used to change your password?
+The passwd command sets and changes passwords for users. 
+
+10. How to find the difference in two configuration files?
+Diff command 
+
+11. How to find where a file is in Linux?
+ Use the locate command to find the file in Linux.
+
+12. Which command shows the users that are logged in?
+w Command
+
+13. How to forcefully stop a process which is running in the background?
+kill PID
+
+14. Which command is used to list the name of files starting from any particular alphabet or string?
+ls -lhS
+
+15. How to move multiple files of the same extension to a different directory?
+To move multiple files using the mv command pass the names of the files or a pattern followed by the destination.
+mv file1.txt file.2.txt file3.txt folder
+
+16. What command would you use to check how much memory is being used?
+The vmstat command with the s option, lays out the memory usage statistics much like the proc command.
+
+17. Which command is used to display the list of content in reverse order?
+ls -r
+
+18. What command is used to show how long it's been since the server was rebooted?
+last command 
+
+19. What command is used to change the ownership of a file?
+chown command
+
+
+Advanced Level
+1. How to see the list of mounted devices on a Linux system?
+mount command – Show all mounted file systems.
+
+2. How to check disk usage in terms of kilobytes(K), megabytes(M) and gigabytes(G)?
+df- displays values in 1-kilobyte blocks.
+df –h- displays -Display Usage in Megabytes and Gigabytes
+
+3. What is Swap Space? What is a typical size for a swap partition in Linux?
+The primary function of swap space is to substitute disk space for RAM memory when real RAM fills up and more space is needed.
+Swap space can be a dedicated swap partition (recommended), a swap file, or a combination of swap partitions and swap file. Swap should equal 2x physical RAM for up to 2 GB of physical RAM, and then an additional 1x physical RAM for any amount above 2 GB, but never less than 32 MB.
+
+4. How would you schedule a task in Linux?
+CRON is a task scheduler (a daemon) which runs commands at predetermined times and intervals.
+First, open a terminal window from your Linux desktop’s applications menu. 
+Use the crontab -e command to open your user account’s crontab file.
+If you want a command to run with system permissions, use the sudo crontab -e command to open the root account’s crontab file. Use the su -c “crontab -e” command instead if your Linux distribution doesn’t use sudo.
+
+5. How these commands would be working try and explain (files contain “hello” word) : 
+● grep -v -i hello file1.txt 
+You can use grep to print all lines that do not match a specific pattern of characters. To invert the search, append -v to a grep command.
+grep -v hello
+● grep -i hello file2.txt 
+The terminal displays both uppercase and lowercase results. The output includes lines with mixed case entries.
+grep -i hello *
+● grep -A 2 hello file2.txt 
+Use –A and a number of lines to display after a match: grep –A 3 hello – This command prints three lines after the match.
+● grep -C 4 hello file1.txt 
+Use –C and several lines to display before and after the match: grep –C 2 hello – This command prints two lines before and after the match.
+● grep -B 3 hello file1.txt 
+Use –B and a number of lines to display before a match: grep –B 2 hello – This command prints two lines before the match.
+● ps -ef | more 
+This command is used to find the PID (Process ID, Unique number of the process) of the process. Each process will have the unique number which is called as PID of the process.
+● awk '{print $2,$5;}' employee.txt
+search pattern is a regular expression.
+Actions – statement(s) to be performed.
+several patterns and actions are possible in Awk.
+file – Input file.
+Single quotes around program is to avoid shell not to interpret any of its special characters.
+
+
+6. What is the export command used for? (Give Example) 
+The export command is one of the bash shell BUILTINS commands, which means it is part of your shell. The export command is simple to use as it has straightforward syntax with only three available command options. In general, the export command marks an environment variable to be exported with any newly forked child processes and thus it allows a child process to inherit all marked variables. 
+Example:
+$ a=linuxcareer.com
+$ echo $a
+linuxcareer.com
+$ bash
+$ echo $a
+
+Line 1: new variable called "a" is created to contain string "linuxcareer.com"
+Line 2: we use echo command to print out a content of the variable "a"
+Line 3: we have created a new child bash shell
+Line 4: variable "a" no longer have any values defined
+
+
+7. Explain the redirection operator? 
+Redirection is a feature in Linux such that when executing a command, you can change the standard input/output devices. The basic workflow of any Linux command is that it takes an input and give an output.
+The standard input (stdin) device is the keyboard.
+The standard output (stdout) device is the screen.
+With redirection, the above standard input/output can be changed.
+Output Redirection
+The '>' symbol is used for output (STDOUT) redirection.
+Example: ls -al > listings
+Input redirection
+The '<' symbol is used for input (STDIN) redirection
+Example: Mail -s "Subject" to-address < Filename
+
+8. Which command is used to review boot messages?
+mesg command is used to review boot messages.
+Syntax: dmesg [options]
+
+9. Which command is used to change the permissions of a file?Explain its usage? 
+The chmod command enables you to change the permissions on a file. You must be superuser or the owner of a file or directory to change its permissions.
+You can use the chmod command to set permissions in either of two modes:
+Absolute Mode – Use numbers to represent file permissions (the method most commonly used to set permissions). When you change permissions by using the absolute mode, you represent permissions for each triplet by an octal mode number. 
+Symbolic Mode – Use combinations of letters and symbols to add or remove permissions. 
+
+10. Which command would you use to create a file system on a new hard drive? 
+To verify that the Linux kernel can see the partition, you can cat out /proc/partitions 
+Decide what kind of filesystem you want to create, such as ext4, XFS, or anything else.
+For the purposes of this exercise, choose ext4. (I like ext4 because it allows you to shrink the filesystem if you need to, a thing that isn't as straightforward with XFS.) Here's how it can be done (the output may differ based on device name/sizes):
+
+11. How to compress files in Linux? 
+Use the command tar, zip and gzip.
+
+12. Which file is used to automatically mount file systems on boot? 
+The /etc/vfstab file, which will automatically mount the file system when the system is booted in multi-user state. AutoFS, which will automatically mount or unmount the file system when you change into (mount) or out of (unmount) the directory.
+
+13. Find out the purpose of each of the following commands: 
+● shutdown -The shutdown command lets you power off, reboot, and halt your system. 
+● diff -diff stands for difference. This command is used to display the differences in the files by comparing the files line by line.
+● sort- SORT command is used to sort a file, arranging the records in a order. 
+ ● ps - ps command is used to list the currently running processes and their PIDs along with some other information depends on different options.
+● kill -kill command sends a signal to a process which terminates the process.
+● mount -The mount command instructs the operating system that a file system is ready to use and associates it with a particular point in the overall file system hierarchy (its mount point) and sets options relating to its access.
+● nano- It includes all the basic functionality you'd expect from a regular text editor, like syntax highlighting, multiple buffers, search and replace with regular expression support, spellchecking, UTF-8 encoding, and more.
+
+14. What are symbolic links? How do you create one using command? 
+A symbolic link is a type of file. It contains references to another file directory in the form of absolute or a relative path.
+ln -s source_file myfile
+
+15. How would you copy a file or a directory from your system to another system on the same network?
+To copy a file to another server, use the following procedure:
+•	Log in to your server with SSH as root.
+•	Navigate to the directory where there are the files to be transferred, using cd command:
+cd /path/to/the/directory/
+•	Type the following command (make sure you replace the IP address and the file name):
+scp file.txt 10.10.10.10:/root/
+•	In this example, 10.10.10.10 is the IP address of the destination server, and /root/ is the destination folder of file.txt.
+•	You will be prompted to enter the root password of the remote server.
+
+
+
+
+
+
